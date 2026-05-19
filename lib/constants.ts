@@ -1,0 +1,6 @@
+export const PHONE = '058-656-8980'
+export const PHONE_HREF = 'tel:0586568980'
+export const WHATSAPP_HREF = 'https://wa.me/9720586568980'
+export const EMAIL = 'contact@ben-tech.co.il'
+export const EMAIL_HREF = 'mailto:contact@ben-tech.co.il'
+export const FACEBOOK_HREF = 'https://facebook.com'
