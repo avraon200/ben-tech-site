@@ -13,7 +13,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
           <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
         ))}
       </div>
-      <p className="text-text-primary leading-relaxed line-clamp-3">"{review.quote}"</p>
+      <p className="text-text-primary leading-relaxed line-clamp-3">&quot;{review.quote}&quot;</p>
       <div className="mt-auto pt-2 border-t border-gray-100">
         <p className="font-semibold text-text-primary text-sm">{review.name}</p>
         <p className="text-text-muted text-xs">{review.city}</p>

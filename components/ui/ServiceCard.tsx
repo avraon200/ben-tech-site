@@ -1,10 +1,12 @@
 'use client'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ShieldAlert, Camera, DoorOpen, Home, Network } from 'lucide-react'
+import { ShieldAlert, Camera, DoorOpen, Home, Network, LucideProps } from 'lucide-react'
 import type { Service } from '@/data/services'
 
-const iconMap: Record<string, React.ComponentType<any>> = {
+type IconComponent = React.ComponentType<LucideProps>
+
+const iconMap: Record<string, IconComponent> = {
   ShieldAlert,
   Camera,
   DoorOpen,
