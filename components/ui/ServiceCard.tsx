@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ShieldAlert, Camera, DoorOpen, Home, Network, LucideProps } from 'lucide-react'
+import { ShieldAlert, Camera, DoorOpen, Home, Network, ArrowLeft, LucideProps } from 'lucide-react'
 import type { Service } from '@/data/services'
 
 type IconComponent = React.ComponentType<LucideProps>
@@ -22,22 +22,25 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const Icon = iconMap[service.icon] ?? ShieldAlert
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.03 }}
-      transition={{ duration: 0.2 }}
-      className="bg-surface rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col gap-4"
-    >
-      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-        <Icon size={28} className="text-primary" />
-      </div>
-      <h3 className="text-xl font-bold text-text-primary">{service.title}</h3>
-      <p className="text-text-muted text-sm leading-relaxed flex-1">{service.description}</p>
-      <Link
-        href={service.href}
-        className="text-accent font-semibold text-sm hover:underline mt-auto"
+    <div className="shimmer-border h-full">
+      <motion.div
+        whileHover={{ y: -6 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+        className="bg-white rounded-2xl p-7 flex flex-col gap-4 h-full shadow-sm hover:shadow-xl transition-shadow duration-300"
       >
-        קרא עוד ←
-      </Link>
-    </motion.div>
+        <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-gradient-to-br from-primary to-blue-500 shadow-md">
+          <Icon size={26} className="text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-text-primary">{service.title}</h3>
+        <p className="text-text-muted text-sm leading-relaxed flex-1">{service.description}</p>
+        <Link
+          href={service.href}
+          className="flex items-center gap-2 text-primary font-semibold text-sm group mt-auto"
+        >
+          <span className="group-hover:text-accent transition-colors">קרא עוד</span>
+          <ArrowLeft size={16} className="group-hover:text-accent group-hover:-translate-x-1 transition-all" />
+        </Link>
+      </motion.div>
+    </div>
   )
 }
