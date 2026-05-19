@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Assistant } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp'
 
 const assistant = Assistant({
   subsets: ['hebrew', 'latin'],
@@ -18,7 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="he" dir="rtl" className={assistant.variable}>
       <body className="font-assistant">
-        {children}
+        <Navbar />
+        <main className="pt-16">{children}</main>
+        <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   )
