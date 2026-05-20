@@ -19,7 +19,7 @@ const config: Config = {
         'text-muted': '#64748B',
       },
       fontFamily: {
-        assistant: ['var(--font-assistant)', 'sans-serif'],
+        heebo: ['var(--font-heebo)', 'sans-serif'],
       },
       boxShadow: {
         'neon-cyan': '0 0 30px rgba(6,182,212,0.25), 0 0 60px rgba(6,182,212,0.1)',

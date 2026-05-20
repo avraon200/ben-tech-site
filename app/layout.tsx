@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Assistant } from 'next/font/google'
+import { Heebo } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp'
 
-const assistant = Assistant({
+const heebo = Heebo({
   subsets: ['hebrew', 'latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-assistant',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-heebo',
   display: 'swap',
 })
 
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className={assistant.variable}>
-      <body className="font-assistant">
+    <html lang="he" dir="rtl" className={heebo.variable}>
+      <body className="font-heebo">
         <Navbar />
         <main className="pt-16">{children}</main>
         <Footer />

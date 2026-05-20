@@ -34,8 +34,8 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
       scrolled
-        ? 'bg-slate-950/92 backdrop-blur-xl shadow-lg shadow-black/30 border-b border-cyan/10'
-        : 'bg-transparent'
+        ? 'bg-slate-950/95 backdrop-blur-xl shadow-xl shadow-black/40 border-b border-cyan/10'
+        : 'bg-gradient-to-b from-slate-950/60 to-transparent backdrop-blur-sm border-b border-white/5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -56,10 +56,8 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm font-medium px-3 py-1.5 rounded-lg transition-all duration-200 ${
                 pathname === link.href
-                  ? 'bg-cyan/12 text-cyan border border-cyan/25'
-                  : scrolled
-                    ? 'text-slate-300 hover:text-cyan hover:bg-cyan/8'
-                    : 'text-white/75 hover:text-white hover:bg-white/10'
+                  ? 'bg-cyan/15 text-cyan border border-cyan/30'
+                  : 'text-white/80 hover:text-white hover:bg-white/10'
               }`}
             >
               {link.label}
@@ -70,11 +68,7 @@ export default function Navbar() {
         {/* Phone CTA */}
         <a
           href={PHONE_HREF}
-          className={`hidden lg:flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-200 hover:scale-105 ${
-            scrolled
-              ? 'bg-accent hover:bg-red-500 text-white shadow-md hover:shadow-accent/30'
-              : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:border-cyan/30'
-          }`}
+          className="hidden lg:flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-200 hover:scale-105 bg-accent hover:bg-red-500 text-white shadow-md hover:shadow-lg hover:shadow-accent/30"
         >
           <Phone size={14} />
           {PHONE}

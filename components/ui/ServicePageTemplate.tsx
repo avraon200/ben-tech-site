@@ -67,7 +67,7 @@ export default function ServicePageTemplate({
           </AnimateOnScroll>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map(({ icon: Icon, text }, i) => (
-              <AnimateOnScroll key={text} delay={i * 0.07}>
+              <AnimateOnScroll key={text} delay={i * 0.07} variant={i % 2 === 0 ? 'slideRight' : 'slideLeft'}>
                 <div className="cyber-card rounded-2xl p-6 flex items-start gap-4 group hover:-translate-y-1 transition-transform duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-gradient-to-br from-cyan-500/15 to-blue-600/15 border border-cyan-500/20 group-hover:border-cyan-400/40 transition-all duration-300 flex-shrink-0 icon-glow">
                     <Icon size={20} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
@@ -92,7 +92,7 @@ export default function ServicePageTemplate({
           </AnimateOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {steps.map((step, i) => (
-              <AnimateOnScroll key={step.number} delay={i * 0.12}>
+              <AnimateOnScroll key={step.number} delay={i * 0.14} variant="scaleUp">
                 <div className="neon-border h-full">
                   <div className="premium-card rounded-2xl p-8 flex flex-col items-center gap-5 h-full">
                     <div className="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold text-white bg-gradient-to-br from-cyan to-primary shadow-neon-cyan">
