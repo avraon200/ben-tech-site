@@ -12,6 +12,7 @@ const config: Config = {
         primary: '#1E40AF',
         'primary-dark': '#1E3A5F',
         accent: '#DC2626',
+        cyan: '#06B6D4',
         background: '#F8FAFC',
         surface: '#FFFFFF',
         'text-primary': '#1E293B',
@@ -19,6 +20,11 @@ const config: Config = {
       },
       fontFamily: {
         assistant: ['var(--font-assistant)', 'sans-serif'],
+      },
+      boxShadow: {
+        'neon-cyan': '0 0 30px rgba(6,182,212,0.25), 0 0 60px rgba(6,182,212,0.1)',
+        'neon-blue': '0 0 30px rgba(30,64,175,0.35), 0 0 60px rgba(30,64,175,0.15)',
+        'glow-sm': '0 0 15px rgba(6,182,212,0.2)',
       },
     },
   },
